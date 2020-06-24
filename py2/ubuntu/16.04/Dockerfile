@@ -17,4 +17,5 @@ RUN apt-get -qy update && apt-get -o APT::Install-Recommends=false -qy install \
   && useradd --shell /bin/bash -u 913 -g 209 -o -c "IMIO base user" -m imio
 
 ADD bash-vim.tar.gz /
+ADD run_tests.sh /root/
 
