@@ -1,4 +1,6 @@
 sut:
   build: .
-  command: /root/run_tests.sh
+  command: >
+      sh -c "id -u imio | grep -q '913' &&
+             date | grep -q 'CEST'"
 
