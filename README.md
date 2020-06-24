@@ -1,5 +1,9 @@
 # docker-bases
 ## tags
+base:py2-ubuntu
+base:py2-alpine
+base:py3-ubuntu
+base:py3-alpine
 
 ## What 
 
