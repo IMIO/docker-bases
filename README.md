@@ -2,7 +2,7 @@
 
 This repo is used to create base images for iMio organization.
 
-The name of image is `imio/base` and we use different tag
+The name of image is `imiobe/base` and we use different tag
 
 ## Tags
 
@@ -37,11 +37,10 @@ We preinstall some tools on image
 - vim
 
 ## Tests
-Into a folder (example py3/alpine/) you have to build the image and run it with test file
+Into a folder (example py3/alpine/) we add a docker-compose.test.yml file used to run tests.
 ```
     $ cd py3/alpine/
-    $ docker build -t imio/base:py3-alpine .
-    $ docker run -v ${PWD}/run_tests.sh:/run_tests.sh -ti imio/base:py3-alpine /run_tests.sh
+    $ docker-compose -f docker-compose.test.yml run sut
 ```
 
 # License
