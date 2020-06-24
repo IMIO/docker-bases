@@ -19,9 +19,11 @@ We add "Europe/Brussels" timezone
 ### Base user
 We use same user in all our applications
 
-| username | imio |
-| uid      | 913  |
-| gid      | 209  |
+| key      | value |
+|----------|-------|
+| username | imio  |
+| uid      | 913   |
+| gid      | 209   |
 
 
 ### Tools lib
