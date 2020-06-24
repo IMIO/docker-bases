@@ -1,8 +1,11 @@
 # docker-bases
 ## tags
 base:py2-ubuntu
+
 base:py2-alpine
+
 base:py3-ubuntu
+
 base:py3-alpine
 
 ## What 
@@ -11,8 +14,10 @@ base:py3-alpine
 "Europe/Brussels"
 
 ### base user
-username: imio  
-uid: 913  
+username: imio
+
+uid: 913
+
 gid: 209
 
 
