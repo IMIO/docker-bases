@@ -7,6 +7,7 @@ RUN apt-get -qy update && apt-get -o APT::Install-Recommends=false -qy install \
         htop \
         locales \
         ncurses-term \
+        python \
         software-properties-common \
         telnet \
         tzdata \
