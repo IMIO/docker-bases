@@ -12,6 +12,7 @@ It offers a much simpler way to install everything documentgenerator related.
 - [`py3-alpine`, `py3-latest` (*py3/alpine/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/alpine/Dockerfile)
 - [`py2-ubuntu-18.04` (*py2/ubuntu/18.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/18.04/Dockerfile)
 - [`py2-ubuntu-16.04` (*py2/ubuntu/16.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/16.04/Dockerfile)
+- [`py2-debian-buster` (*py2/debian/buster/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/debian/buster/Dockerfile)
 
 ## Images
 In this section, we explain what is on your base images
