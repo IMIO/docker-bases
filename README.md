@@ -34,7 +34,6 @@ We preinstall some tools on image
 - curl
 - htop
 - bash-completion
-- curl
 - htop
 - tzdata
 - vim
