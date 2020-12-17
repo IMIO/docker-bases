@@ -2,7 +2,7 @@ sut:
   build: .
   command: >
       sh -c "
-        if id -u imio | grep -q '913' && date | grep -q 'CEST'; then
+        if id -u imio | grep -q '913' && date +%Z | grep -q 'CE'; then
           echo \"Tests passed!\"
           exit 0
         else
