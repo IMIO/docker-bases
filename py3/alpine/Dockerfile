@@ -13,5 +13,4 @@ RUN apk add --no-cache --virtual \
   && addgroup -g 209 imio \
   && adduser -D -G imio -u 913 imio
 
-ADD bash-vim.tar.gz /
-
+ADD bash-vim.tar.gz
