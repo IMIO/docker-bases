@@ -47,7 +47,7 @@ jobs:
           tags: imiobe/base:py2-debian-buster
           pull: true
           push: true
-  py2-ubuntu-18.04:
+  py2-ubuntu-18_04:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -68,7 +68,7 @@ jobs:
           tags: imiobe/base:py2-ubuntu-18.04
           pull: true
           push: true
-  py2-ubuntu-20.04:
+  py2-ubuntu-20_04:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -110,7 +110,7 @@ jobs:
           tags: imiobe/base:py3-alpine
           pull: true
           push: true
-  py3-ubuntu-20.04:
+  py3-ubuntu-20_04:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
