@@ -14,8 +14,6 @@ Ubuntu is closer to the dev environment but Debian offers more stability.
 - [`py3-alpine`, `py3-latest` (*py3/alpine/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/alpine/Dockerfile)
 - [`py3-ubuntu-20.04`, (*py3/ubuntu/20.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/20.04/Dockerfile)
 - [`py2-ubuntu-20.04` (*py2/ubuntu/20.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/20.04/Dockerfile)
-- [`py2-ubuntu-18.04` (*py2/ubuntu/18.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/18.04/Dockerfile)
-- [`py2-ubuntu-16.04` (*py2/ubuntu/16.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/16.04/Dockerfile)
 - [`py2-debian-buster` (*py2/debian/buster/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/debian/buster/Dockerfile)
 
 ## Images
