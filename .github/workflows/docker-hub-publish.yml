@@ -3,7 +3,7 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: '0 2 * * 0' # Weekly on Sundays at 02:00
+    - cron: '0 15 * * 6' # Weekly on Saturdays at 15:00
 jobs:
   debian-buster:
     runs-on: ubuntu-latest
