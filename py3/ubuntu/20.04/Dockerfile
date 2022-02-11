@@ -7,6 +7,7 @@ RUN apt-get update -qqy \
         bash-completion \
         curl \
         htop \
+        iproute2 \
         locales \
         ncurses-term \
         python3 \
