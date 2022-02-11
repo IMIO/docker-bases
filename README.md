@@ -38,6 +38,7 @@ We preinstall some tools on image
 - htop
 - bash-completion
 - htop
+- iproute2
 - tzdata
 - vim
 
