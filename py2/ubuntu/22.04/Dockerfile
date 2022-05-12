@@ -9,7 +9,9 @@ RUN apt-get update -qqy \
         htop \
         locales \
         ncurses-term \
-        python2.7 \
+        python2 \
+        python2-pip-whl \
+        python2-setuptools-whl \
         software-properties-common \
         telnet \
         tzdata \
@@ -22,4 +24,3 @@ RUN apt-get update -qqy \
   && useradd --shell /bin/bash -u 913 -g 209 -o -c "IMIO base user" -m imio
 
 ADD bash-vim.tar.gz /
-
