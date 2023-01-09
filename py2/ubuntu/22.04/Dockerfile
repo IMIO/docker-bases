@@ -16,6 +16,7 @@ RUN apt-get update -qqy \
         telnet \
         tzdata \
         vim \
+        gpg-agent \
   && rm -rf /var/lib/apt/lists/* \
   && ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime \
   && echo "Europe/Brussels" > /etc/timezone \
