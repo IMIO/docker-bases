@@ -11,6 +11,7 @@ RUN apt-get update -qqy \
         locales \
         ncurses-term \
         python3 \
+        python3-pip \
         software-properties-common \
         telnet \
         tzdata \
