@@ -51,7 +51,7 @@ jobs:
           pull: true
           push: true
   py3-ubuntu-22_04:
-    runs-on: ubuntu-latest
+    runs-on: gha-runners
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -59,16 +59,17 @@ jobs:
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
+      - name: Login to Harbor
+        uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          registry: ${{ secrets.HARBOR_URL }}
+          username: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          password: ${{ secrets.COMMON_HARBOR_PASSWORD }}
       - name: py3-ubuntu-22.04
         uses: docker/build-push-action@v2.5.0
         with:
           context: py3/ubuntu/22.04
-          tags: imiobe/base:py3-ubuntu-22.04
+          tags: common/base:py3-ubuntu-22.04
           platforms: linux/amd64
           pull: true
           push: true
