@@ -52,7 +52,7 @@ jobs:
           push: true
   py3-ubuntu-22_04:
     runs-on:
-      group: Default
+      group: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
