@@ -28,6 +28,24 @@ jobs:
           platforms: linux/amd64
           pull: true
           push: true
+  py2-ubuntu-22_04_harbor:
+    runs-on:
+      group: self-hosted
+    steps:
+      - name: Build push and notify
+        uses: IMIO/gha/build-push-notify@v2.0
+        env:
+          IMAGE_NAME: base
+        with:
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          CONTEXT: py2/ubuntu/22.04
+          DOCKERFILE: py2/ubuntu/22.04/Dockerfile
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/common/${{ env.IMAGE_NAME }}:py2-ubuntu-22.04
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}/common
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
   py3-alpine:
     runs-on: ubuntu-latest
     steps:
