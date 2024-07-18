@@ -9,7 +9,6 @@ RUN apk add --no-cache --virtual \
   && ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime \
   && echo "Europe/Brussels" > /etc/timezone \
   && apk del tzdata \
-  && deluser smmsp \
   && addgroup -g 209 imio \
   && adduser -D -G imio -u 913 imio
 
