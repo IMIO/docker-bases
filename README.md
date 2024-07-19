@@ -2,18 +2,20 @@
 
 This repo is used to create base images for iMio organization.
 
-The name of image is `imiobe/base` and we use different tag.
+The name of image is `common/base` and we use different tag.
 
-We use Ubuntu and Debian because of this package https://packages.ubuntu.com/xenial/libreoffice-script-provider-python.
+We use Ubuntu because of this package https://packages.ubuntu.com/xenial/libreoffice-script-provider-python.
 It offers a much simpler way to install everything documentgenerator related.
 
-Ubuntu is closer to the dev environment but Debian offers more stability.
+Ubuntu is closer to the dev environment.
 
 ## Tags
 
 - [`py3-alpine`, `py3-latest` (*py3/alpine/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/alpine/Dockerfile)
-- [`py3-ubuntu-22.04`, (*py3/ubuntu/22.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/22.04/Dockerfile)
 - [`py2-ubuntu-22.04`, (*py2/ubuntu/22.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/22.04/Dockerfile)
+- [`py3-ubuntu-20.04`, (*py3/ubuntu/20.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/20.04/Dockerfile)
+- [`py3-ubuntu-22.04`, (*py3/ubuntu/22.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/22.04/Dockerfile)
+- [`py3-ubuntu-24.04`, (*py3/ubuntu/24.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/24.04/Dockerfile)
 
 ## Images
 In this section, we explain what is on your base images
