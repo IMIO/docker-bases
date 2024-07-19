@@ -10,8 +10,24 @@ env:
   IMAGE_NAME: common/base
 
 jobs:
+  py2-ubuntu-20_04:
+    runs-on:
+      group: self-hosted
+    steps:
+      - name: Build push py2-ubuntu-20.04 and notify
+        uses: IMIO/gha/build-push-notify@v3.2
+        with:
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/${{ env.IMAGE_NAME }}:py2-ubuntu-20.04
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
+          CONTEXT: py2/ubuntu/20.04
+          DOCKERFILE: py2/ubuntu/20.04/Dockerfile
   py2-ubuntu-22_04:
-    runs-on: 
+    runs-on:
       group: self-hosted
     steps:
       - name: Build push py2-ubuntu-22.04 and notify
@@ -28,7 +44,7 @@ jobs:
           DOCKERFILE: py2/ubuntu/22.04/Dockerfile
 
   py3-alpine:
-    runs-on: 
+    runs-on:
       group: self-hosted
     steps:
       - name: Build push py3-alpine and notify
@@ -42,7 +58,7 @@ jobs:
           REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: py3/alpine
-          DOCKERFILE: py3/alpine/Dockerfile          
+          DOCKERFILE: py3/alpine/Dockerfile
 
   py3-ubuntu-20_04:
     runs-on: 
@@ -59,10 +75,10 @@ jobs:
           REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: py3/ubuntu/20.04
-          DOCKERFILE: py3/ubuntu/20.04/Dockerfile       
+          DOCKERFILE: py3/ubuntu/20.04/Dockerfile
 
   py3-ubuntu-22_04:
-    runs-on: 
+    runs-on:
       group: self-hosted
     steps:
       - name: Build push py3-ubuntu-22_04 and notify
@@ -76,10 +92,10 @@ jobs:
           REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: py3/ubuntu/22.04
-          DOCKERFILE: py3/ubuntu/22.04/Dockerfile    
+          DOCKERFILE: py3/ubuntu/22.04/Dockerfile
 
   py3-ubuntu-24_04:
-    runs-on: 
+    runs-on:
       group: self-hosted
     steps:
       - name: Build push py3-ubuntu-24_04 and notify
@@ -93,4 +109,4 @@ jobs:
           REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: py3/ubuntu/24.04
-          DOCKERFILE: py3/ubuntu/24.04/Dockerfile    
+          DOCKERFILE: py3/ubuntu/24.04/Dockerfile
