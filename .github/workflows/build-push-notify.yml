@@ -29,6 +29,7 @@ jobs:
   actions-runner-django:
     runs-on:
       group: self-hosted
+    needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -45,6 +46,7 @@ jobs:
   actions-runner-plone-py2:
     runs-on:
       group: self-hosted
+    needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -61,6 +63,7 @@ jobs:
   actions-runner-plone-py3:
     runs-on:
       group: self-hosted
+    needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
