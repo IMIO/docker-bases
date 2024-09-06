@@ -15,7 +15,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push actions-runner-base and notify
-        uses: IMIO/gha/build-push-notify@v3.6.1
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: common/actions-runner-base
           IMAGE_TAGS: |
@@ -26,12 +26,60 @@ jobs:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: actions-runner/base
           DOCKERFILE: actions-runner/base/Dockerfile
+  actions-runner-django:
+    runs-on:
+      group: self-hosted
+    steps:
+      - name: Build push actions-runner-base and notify
+        uses: IMIO/gha/build-push-notify@v3.9.3
+        with:
+          IMAGE_NAME: common/actions-runner-django
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/common/actions-runner-django:latest
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
+          CONTEXT: actions-runner/django
+          DOCKERFILE: actions-runner/django/Dockerfile
+  actions-runner-plone-py2:
+    runs-on:
+      group: self-hosted
+    steps:
+      - name: Build push actions-runner-base and notify
+        uses: IMIO/gha/build-push-notify@v3.9.3
+        with:
+          IMAGE_NAME: common/actions-runner-plone-py2
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/common/actions-runner-plone-py2:latest
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
+          CONTEXT: actions-runner/plone/py2
+          DOCKERFILE: actions-runner/plone/py2/Dockerfile
+  actions-runner-plone-py3:
+    runs-on:
+      group: self-hosted
+    steps:
+      - name: Build push actions-runner-base and notify
+        uses: IMIO/gha/build-push-notify@v3.9.3
+        with:
+          IMAGE_NAME: common/actions-runner-plone-py3
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/common/actions-runner-plone-py3:latest
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
+          CONTEXT: actions-runner/plone/py3
+          DOCKERFILE: actions-runner/plone/py3/Dockerfile
   py2-ubuntu-20_04:
     runs-on:
       group: self-hosted
     steps:
       - name: Build push py2-ubuntu-20.04 and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -47,7 +95,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push py2-ubuntu-22.04 and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -64,7 +112,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push py3-alpine and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -81,7 +129,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push py3-ubuntu-20_04 and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -98,7 +146,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push py3-ubuntu-22_04 and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
@@ -115,7 +163,7 @@ jobs:
       group: self-hosted
     steps:
       - name: Build push py3-ubuntu-24_04 and notify
-        uses: IMIO/gha/build-push-notify@v3.2
+        uses: IMIO/gha/build-push-notify@v3.9.3
         with:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_TAGS: |
