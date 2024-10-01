@@ -31,6 +31,9 @@ RUN apt-get install --no-install-recommends -qqy  \
       wget \
       zlib1g-dev \
   && rm -rf /var/lib/apt/lists/* \
-  && apt-get clean && rm -rf /var/lib/apt/lists/*
+  && apt-get clean && rm -rf /var/lib/apt/lists/* \
+  && curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py \
+  && python2.7 get-pip.py \
+  && rm get-pip.py
 
 USER runner
