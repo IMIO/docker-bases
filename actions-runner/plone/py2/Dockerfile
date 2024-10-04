@@ -27,6 +27,7 @@ RUN apt-get install --no-install-recommends -qqy  \
       libpq-dev \
       libpq5 \
       libreadline-dev \
+      libreoffice \
       libreoffice-calc \
       libreoffice-java-common \
       libreoffice-script-provider-python \
