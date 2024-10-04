@@ -1,4 +1,4 @@
-FROM ghcr.io/actions/actions-runner:latest AS base
+FROM ghcr.io/actions/actions-runner:2.320.0 AS base
 
 USER root
 
