@@ -7,12 +7,15 @@ RUN apt-get install --no-install-recommends -qqy  \
       cmake \
       gcc \
       git \
+      graphicsmagick \
+      imagemagick \
       libbz2-dev \
       libc6-dev \
       libffi-dev \
       libgif-dev \
       libjpeg62-dev \
       libldap2-dev \
+      libmagic1 \
       libopenjp2-7-dev \
       libpcre3-dev \
       libpq-dev \
