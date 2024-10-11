@@ -42,6 +42,7 @@ RUN apt-get install --no-install-recommends -qqy  \
       lynx \
       make \
       poppler-data \
+      poppler-utils \
       python2 \
       python2-dev \
       python2-pip-whl \
