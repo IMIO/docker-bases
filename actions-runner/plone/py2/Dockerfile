@@ -41,7 +41,6 @@ RUN apt-get install --no-install-recommends -qqy  \
       libxslt1-dev \
       lynx \
       make \
-      nfs-common \
       poppler-data \
       poppler-utils \
       python2 \
