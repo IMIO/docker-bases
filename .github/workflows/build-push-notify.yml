@@ -11,7 +11,7 @@ env:
 
 jobs:
   actions-runner-base:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push actions-runner-base and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -26,7 +26,7 @@ jobs:
           CONTEXT: actions-runner/base
           DOCKERFILE: actions-runner/base/Dockerfile
   actions-runner-django:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
@@ -42,7 +42,7 @@ jobs:
           CONTEXT: actions-runner/django
           DOCKERFILE: actions-runner/django/Dockerfile
   actions-runner-plone-py2:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
@@ -58,7 +58,7 @@ jobs:
           CONTEXT: actions-runner/plone/py2
           DOCKERFILE: actions-runner/plone/py2/Dockerfile
   actions-runner-plone-py3:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     needs: actions-runner-base
     steps:
       - name: Build push actions-runner-base and notify
@@ -74,7 +74,7 @@ jobs:
           CONTEXT: actions-runner/plone/py3
           DOCKERFILE: actions-runner/plone/py3/Dockerfile
   py2-ubuntu-20_04:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py2-ubuntu-20.04 and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -89,7 +89,7 @@ jobs:
           CONTEXT: py2/ubuntu/20.04
           DOCKERFILE: py2/ubuntu/20.04/Dockerfile
   py2-ubuntu-22_04:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py2-ubuntu-22.04 and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -105,7 +105,7 @@ jobs:
           DOCKERFILE: py2/ubuntu/22.04/Dockerfile
 
   py3-alpine:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py3-alpine and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -121,7 +121,7 @@ jobs:
           DOCKERFILE: py3/alpine/Dockerfile
 
   py3-ubuntu-20_04:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py3-ubuntu-20_04 and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -137,7 +137,7 @@ jobs:
           DOCKERFILE: py3/ubuntu/20.04/Dockerfile
 
   py3-ubuntu-22_04:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py3-ubuntu-22_04 and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
@@ -153,7 +153,7 @@ jobs:
           DOCKERFILE: py3/ubuntu/22.04/Dockerfile
 
   py3-ubuntu-24_04:
-    runs-on: gha-runners
+    runs-on: ubuntu-latest
     steps:
       - name: Build push py3-ubuntu-24_04 and notify
         uses: IMIO/gha/build-push-notify@v3.9.3
