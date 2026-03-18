@@ -11,6 +11,7 @@ RUN apt-get install --no-install-recommends -qqy  \
       default-jre-headless \
       file \
       gcc \
+      fonts-liberation \
       ghostscript \
       git \
       graphicsmagick \
@@ -23,7 +24,7 @@ RUN apt-get install --no-install-recommends -qqy  \
       libffi-dev \
       libgdbm-dev \
       libgif-dev \
-      libjpeg62-dev \
+      libjpeg-turbo8-dev \
       libldap2 \
       libldap2-dev \
       libmagic1 \
@@ -68,6 +69,9 @@ RUN apt-get install --no-install-recommends -qqy  \
   && python2.7 get-pip.py \
   && cd \
   && rm -rf /usr/src/Python-2.7.18* \
-  && gem install docsplit
+  && gem install docsplit \
+  && sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml \
+  && sed -i 's/rights="none" pattern="PS"/rights="read|write" pattern="PS"/' /etc/ImageMagick-6/policy.xml \
+  && sed -i 's/rights="none" pattern="EPS"/rights="read|write" pattern="EPS"/' /etc/ImageMagick-6/policy.xml
 
 USER runner
