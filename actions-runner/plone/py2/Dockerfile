@@ -70,6 +70,8 @@ RUN apt-get install --no-install-recommends -qqy  \
   && cd \
   && rm -rf /usr/src/Python-2.7.18* \
   && gem install docsplit \
+  && find /var/lib/gems -path '*/docsplit-*/lib/docsplit/*.rb' \
+       -exec sed -i 's/File\.exists?/File.exist?/g' {} \; \
   && sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml \
   && sed -i 's/rights="none" pattern="PS"/rights="read|write" pattern="PS"/' /etc/ImageMagick-6/policy.xml \
   && sed -i 's/rights="none" pattern="EPS"/rights="read|write" pattern="EPS"/' /etc/ImageMagick-6/policy.xml
