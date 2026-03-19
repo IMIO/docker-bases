@@ -3,7 +3,7 @@ FROM harbor.imio.be/common/actions-runner-base:latest AS base
 USER root
 
 RUN apt-get install --no-install-recommends -qqy  \
-        dpkg-sig \
+        debsigs \
         ruby-dev \
   && gem install fpm --version 1.16.0 \
   && rm -rf /var/lib/apt/lists/* \
