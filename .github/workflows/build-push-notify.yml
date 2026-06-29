@@ -167,3 +167,19 @@ jobs:
           MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
           CONTEXT: py3/ubuntu/24.04
           DOCKERFILE: py3/ubuntu/24.04/Dockerfile
+
+  py3-ubuntu-26_04:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build push py3-ubuntu-26_04 and notify
+        uses: IMIO/gha/build-push-notify@v3.9.3
+        with:
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          IMAGE_TAGS: |
+            ${{ secrets.HARBOR_URL }}/${{ env.IMAGE_NAME }}:py3-ubuntu-26.04
+          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
+          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
+          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
+          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
+          CONTEXT: py3/ubuntu/26.04
+          DOCKERFILE: py3/ubuntu/26.04/Dockerfile
