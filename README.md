@@ -11,7 +11,6 @@ Ubuntu is closer to the dev environment.
 
 ## Tags
 
-- [`py3-alpine`, `py3-latest` (*py3/alpine/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/alpine/Dockerfile)
 - [`py2-ubuntu-22.04`, (*py2/ubuntu/22.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py2/ubuntu/22.04/Dockerfile)
 - [`py3-ubuntu-20.04`, (*py3/ubuntu/20.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/20.04/Dockerfile)
 - [`py3-ubuntu-22.04`, (*py3/ubuntu/22.04/Dockerfile*)](https://github.com/imio/docker-bases/blob/master/py3/ubuntu/22.04/Dockerfile)
@@ -44,9 +43,9 @@ We preinstall some tools on image
 - vim
 
 ## Tests
-Into a folder (example py3/alpine/) we add a docker-compose.test.yml file used to run tests.
+Into a folder (example py3/ubuntu/24.04/) we add a docker-compose.test.yml file used to run tests.
 ```
-    $ cd py3/alpine/
+    $ cd py3/ubuntu/24.04/
     $ docker-compose -f docker-compose.test.yml run sut
 ```
 

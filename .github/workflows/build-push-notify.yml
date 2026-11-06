@@ -104,22 +104,6 @@ jobs:
           CONTEXT: py2/ubuntu/22.04
           DOCKERFILE: py2/ubuntu/22.04/Dockerfile
 
-  py3-alpine:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build push py3-alpine and notify
-        uses: IMIO/gha/build-push-notify@v3.9.3
-        with:
-          IMAGE_NAME: ${{ env.IMAGE_NAME }}
-          IMAGE_TAGS: |
-            ${{ secrets.HARBOR_URL }}/${{ env.IMAGE_NAME }}:py3-alpine
-          REGISTRY_URL: ${{ secrets.HARBOR_URL }}
-          REGISTRY_USERNAME: ${{ secrets.COMMON_HARBOR_USERNAME }}
-          REGISTRY_PASSWORD: ${{ secrets.COMMON_HARBOR_PASSWORD }}
-          MATTERMOST_WEBHOOK_URL: ${{ secrets.COMMON_MATTERMOST_WEBHOOK_URL }}
-          CONTEXT: py3/alpine
-          DOCKERFILE: py3/alpine/Dockerfile
-
   py3-ubuntu-20_04:
     runs-on: ubuntu-latest
     steps:
